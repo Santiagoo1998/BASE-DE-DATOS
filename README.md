@@ -1,5 +1,5 @@
 # BASE-DE-DATOS
-## Consultas monotablas (Si sois cuatro 8 consultas, 2 cada  uno de vosotros)
+## Consultas monotablas
 ### Consultar todos los clientes y sus vehículos asociados:
 SELECT clientes.nombre, clientes.apellido1, clientes.apellido2, vehiculo.marca, vehiculo.modelo
 FROM clientes
