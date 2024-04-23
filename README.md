@@ -1,10 +1,6 @@
 # BASE-DE-DATOS
 ## Descripción de la aplicación y diseño de la BBDD
-## Consultas monotablas (Si sois cuatro 8 consultas, 2 cada  uno de vosotros)
-## Consultas multitabla
-## Inserciones, modificaciones y eliminación de datos
-## Vistas
-## Usuarios y permisos
-## Índices
-## Triggers
-## Procedimientos almacenados
+
+- La app se trata de una aplicación enfocada en la gestión del taller sobre vehículos. El usuario tiene las opciones de ver los vehículos y sus ofertas, los clientes y los trabajadores.
+
+- El diseño de la BBDD se compone de crear las tablas vehículo, clientes, empleado, ofertas y operaciones del taller; luego se insertarán los datos en cada una de ellas.
