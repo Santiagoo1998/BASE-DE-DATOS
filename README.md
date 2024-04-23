@@ -1,10 +1,21 @@
 # BASE-DE-DATOS
-1. Descripción de la aplicación y diseño de la BBDD [Descripcion]
-2. Consultas monotablas (Si sois cuatro 8 consultas, 2 cada  uno de vosotros)
-3. Consultas multitabla
-4. Inserciones, modificaciones y eliminación de datos
-5. Vistas
-6. Usuarios y permisos
-7. Índices
-8. Triggers
-9. Procedimientos almacenados
+
+## Consultas multitabla
+
+- Consultar todas las ofertas disponibles junto con la información de los clientes que las han recibido:
+
+SELECT ofertas.id_oferta, ofertas.descripcion AS descripcion_oferta, 
+       clientes.nombre AS nombre_cliente, clientes.apellido1 AS apellido_cliente, 
+       vehiculo.marca AS marca_vehiculo, vehiculo.modelo AS modelo_vehiculo
+FROM ofertas
+JOIN clientes ON ofertas.cliente = clientes.id_cliente
+JOIN vehiculo ON clientes.vehiculo = vehiculo.id_vehiculo;
+
+- Consultar todas las operaciones realizadas en el taller, incluyendo la información del empleado y del vehículo relacionado:
+
+SELECT operacionesTaller.id_operacion, empleado.nombre AS nombre_empleado, 
+       empleado.apellido1 AS apellido_empleado, vehiculo.marca AS marca_vehiculo, 
+       vehiculo.modelo AS modelo_vehiculo, operacionesTaller.descripcion AS descripcion_operacion
+FROM operacionesTaller
+JOIN empleado ON operacionesTaller.empleado = empleado.id_empleado
+JOIN vehiculo ON operacionesTaller.vehiculo = vehiculo.id_vehiculo;
